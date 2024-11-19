@@ -7,25 +7,23 @@ The goal of this predicting model is to be able to predict weather a lump is ben
 
 ![App Screenshot](/images/slightlyunbalanced.png)
 
-As an inital discovery action, we try to see if there are any relationships that pop out that might lead to a positive response. One of the relationship we tried to see is if having a certain type of job led to a higher positive repsonse.
-
-![App Screenshot](/images/huntingRelation.png)
-
-We failed to see any direct relationship between any specific attribute that led to a positive response.
+We have a dataset that's slightly unbalanced but I think this is ok. We have a fair amount of positive data to work with.
 
 ### Preparing the data for modelling
 
-There are quite a few columns in the data set and seeing that none really had a clear relationship to a positive response, to reduce the number of columns we decided to remove these columns -
+There are 31 features in the dataset and a column for diagnosis, which is either M (malignant) or B (benign).
+The features of the dataset all describe the characteristics of the lump of the patient.
+Some of the feautres are
 
-1. job
-2. month
-3. day_of_week
-4. pdays
-5. default
+1. Area mean
+2. Smoothness mean
+3. Radius
+4. Texture
 
-There were some "unknown" values in columns 'loan' and 'housing'. Instead of trying to fill the unknowns with any values we decided to remove those rows as the count wasn't that high.
+All the data provided are numerical in value and there aren't any missing values that we need to worry about.
+The only column that isn't useful to us is the ID. We will be deleting this column when building our column.
 
-The categorial columns were then encoded so that they were numerical using OneHotEncoder or LabelEncoder.
+We will encode the target colum to numberical just to keep all the data consistent.
 
 ### Modelling
 
