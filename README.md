@@ -36,9 +36,9 @@ Some of the Models we looked at are
 
 Without knowing which model would work for this dataset we fit each model with the training dataset to see if any one of them performed better than the other. We ran a GridSearchCV for each model with different parameters to get the best possible parameters that worked for each model and did a comparison againt other models and their ideal parameters.
 
-![App Screenshot](/images/modelComparison.png)
+![App Screenshot](/images/gridresults.png)
 
-![App Screenshot](/images/modelComparisonChart.png)
+![App Screenshot](/images/gridresultsChart.png)
 
 Looking at the results we see that all models have a fairly similar train and test scores. What differenciates the models are their training times. Even though test score for KNN is slightly lower that Logistic Regression and SVC, the training time is much lower for KNN.
 For this specifc reason we decided to look further with KNN rather than the other models
