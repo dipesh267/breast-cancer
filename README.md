@@ -40,19 +40,17 @@ Without knowing which model would work for this dataset we fit each model with t
 
 ![App Screenshot](/images/gridResultsChart.png)
 
-Looking at the results we see that all models have a fairly similar train and test scores. What differenciates the models are their training times. Even though test score for KNN is slightly lower that Logistic Regression and SVC, the training time is much lower for KNN.
-For this specifc reason we decided to look further with KNN rather than the other models
+Looking at the results we see that all models have a fairly similar train and test scores. The most differenciating factor is their their training times. Even though the training time for KNN model is the lowest by quite a margin, when predicting cases of cancer, it's better to err on the side of caution and use the most accurate predicting model rather than the quickest one.
+For this specifc reason we decided to look further with Decision Tree rather than the other models
 
-When we look at the preliminary confusion matrix for the training dataset we see that we have quite a few false negatives and false positives.
+When we look at the preliminary confusion matrix with the ideal hyperparameters, cirterion='entropy' and max_depth=3, for the training dataset we see that we have few false negatives and false positives but we're mostly predicting accurately.
+But again, when it comes to predicting cancer we're rather predict false positives rather than false negatives. It's always better to get a false positive that can be proven wrong rather than a false negative that can cause the patient to ignore the symptops and cause the cancer to get worse.
 
-![App Screenshot](/images/confusionTraining.png)
+![App Screenshot](/images/confusion-3.png)
 
-Can this be improved upon by trying to balance the dataset?
-We did this by using the RandomOverSampler to oversample the positive class records got a dataset of 2657 positive records and 2560 negative records.
+With the idea that it's better to go try to remove all false negatives, I adjusted the hypermeter max_depth slightly at a time to eventually land on max_depth=7 where I got both false readings to 0.
 
-After trainging the KNN model with the oversampled training dataset, we were able to see that it improved to reduce the number of false positives and false negatives.
-
-![App Screenshot](/images/oversampledConfusion.png)
+![App Screenshot](/images/confusion-7.png)
 
 We then predicted the classes for the larger unseen dataset to see what our confusion matrix looked like but it seems that the false postives rose by quite a bit.
 
