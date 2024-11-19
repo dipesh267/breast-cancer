@@ -1,8 +1,9 @@
-# Selecting the right Classification Model
+# Predicting Breast Cancer
 
-We are looking at a banking dataset for a Portuguese Bank to see if marketing campaigns would lead to a customer agreeing to open a Term Deposit. We would like to know what Classification Model would work best for this purpose.
-
-We are looking a quite unbalanced dataset where there are very few records with positive class compared to the negative class.
+The breast cancer dataset was acquired from Kaggle.
+Breast cancer is caused when cells in the breast grow out of control and form turmors. Normally, they're suspected when women notice a lump in their breast, change in the shape of the breast etc.
+These lumps can either be Benign (non-cancerous) or Malignant (cancerous).
+The goal of this predicting model is to be able to predict weather a lump is benign or malignant based on the characteristics of the lump.
 
 ![App Screenshot](/images/unbalanced.png)
 
