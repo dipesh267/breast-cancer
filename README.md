@@ -5,7 +5,7 @@ Breast cancer is caused when cells in the breast grow out of control and form tu
 These lumps can either be Benign (non-cancerous) or Malignant (cancerous).
 The goal of this predicting model is to be able to predict weather a lump is benign or malignant based on the characteristics of the lump.
 
-![App Screenshot](/images/unbalanced.png)
+![App Screenshot](/images/slightlyunbalanced.png)
 
 As an inital discovery action, we try to see if there are any relationships that pop out that might lead to a positive response. One of the relationship we tried to see is if having a certain type of job led to a higher positive repsonse.
 
