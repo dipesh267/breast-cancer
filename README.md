@@ -51,3 +51,8 @@ But again, when it comes to predicting cancer we're rather predict false positiv
 With the idea that it's better to try to remove all false negatives, I adjusted the hypermeter max_depth slightly at a time to eventually land on max_depth=7 where I got both false readings to 0.
 
 ![App Screenshot](/images/confusion-7.png)
+
+### Recommendation
+
+The accuracy of the model is fairly high. With the confusion matrix showing that we had 0 false negatives and 0 false positives, I would recommend we take this current model and put it in production and let it work with some new data.
+We should keep an eye out on the model and train the model again if we start seeing the failure rates increase.
