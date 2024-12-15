@@ -60,10 +60,13 @@ With the Logistic Regression Confusion Matrix, we see that we have about 19 misd
 
 ![App Screenshot](/images/confusion-lr.png)
 
-The KNN confusion matrix had about 27 misdiagnosis where 20 was false negatives and 7 were false positives.
+The KNN confusion matrix had about 27 misdiagnosis where 20 were false negatives and 7 were false positives.
+
 ![App Screenshot](/images/confusion-knn.png)
 
 ### Recommendation
 
-The accuracy of the Decision Tree model we picked is fairly high. With the confusion matrix showing that we had 0 false negatives and 0 false positives, I would recommend we take this current model and put it in production and let it work with some new data.
+The accuracy of the Decision Tree model we picked is fairly high and the fact that KNN and Logistic regression had false positives make the decision easier to go with Desision Tree atleast for now. With the confusion matrix showing that we had 0 false negatives and 0 false positives, I would recommend we take this current model and put it in production and let it work with some new data.
+
 We should keep an eye out on the model and train the model again if we start seeing the failure rates increase.
+If the Decision Tree model starts to fail with production data, we should look at tuning the other two models to see if they will perform better with unseen data.
