@@ -52,7 +52,18 @@ With the idea that it's better to try to remove all false negatives, I adjusted 
 
 ![App Screenshot](/images/confusion-7.png)
 
+### As part of an extensive review I would like to take a look at the confusion matrix for KNN and Logistic Regression as well.
+
+With the test scores being very close to each other in the 95% and above range, let's compare the Decision Tree confusion matrix to that of KNN and Logistic Regression.
+
+With the Logistic Regression Confusion Matrix, we see that we have about 19 misdiagnosis. 11 of those are false negative and 8 are false positives.
+
+![App Screenshot](/images/confusion-lr.png)
+
+The KNN confusion matrix had about 27 misdiagnosis where 20 was false negatives and 7 were false positives.
+![App Screenshot](/images/confusion-knn.png)
+
 ### Recommendation
 
-The accuracy of the model is fairly high. With the confusion matrix showing that we had 0 false negatives and 0 false positives, I would recommend we take this current model and put it in production and let it work with some new data.
+The accuracy of the Decision Tree model we picked is fairly high. With the confusion matrix showing that we had 0 false negatives and 0 false positives, I would recommend we take this current model and put it in production and let it work with some new data.
 We should keep an eye out on the model and train the model again if we start seeing the failure rates increase.
